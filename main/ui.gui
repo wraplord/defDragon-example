@@ -1,0 +1,162 @@
+script: "/main/ui.gui_script"
+fonts {
+  name: "default"
+  font: "/builtins/fonts/default.font"
+}
+nodes {
+  position {
+    x: 131.0
+    y: 569.0
+  }
+  size {
+    x: 200.0
+    y: 50.0
+  }
+  color {
+    x: 0.2
+    y: 0.2
+    z: 0.2
+  }
+  type: TYPE_BOX
+  id: "box1"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  size {
+    x: 200.0
+    y: 50.0
+  }
+  type: TYPE_TEXT
+  text: "Idle"
+  font: "default"
+  id: "text1"
+  parent: "box1"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 131.0
+    y: 497.0
+  }
+  size {
+    x: 200.0
+    y: 50.0
+  }
+  color {
+    x: 0.2
+    y: 0.2
+    z: 0.2
+  }
+  type: TYPE_BOX
+  id: "box2"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  size {
+    x: 200.0
+    y: 50.0
+  }
+  type: TYPE_TEXT
+  text: "Idle Sleep"
+  font: "default"
+  id: "text2"
+  parent: "box2"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 131.0
+    y: 421.0
+  }
+  size {
+    x: 200.0
+    y: 50.0
+  }
+  color {
+    x: 0.2
+    y: 0.2
+    z: 0.2
+  }
+  type: TYPE_BOX
+  id: "box3"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  size {
+    x: 200.0
+    y: 50.0
+  }
+  type: TYPE_TEXT
+  text: "Run"
+  font: "default"
+  id: "text3"
+  parent: "box3"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 131.0
+    y: 354.0
+  }
+  size {
+    x: 200.0
+    y: 50.0
+  }
+  color {
+    x: 0.2
+    y: 0.2
+    z: 0.2
+  }
+  type: TYPE_BOX
+  id: "box4"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  size {
+    x: 200.0
+    y: 50.0
+  }
+  type: TYPE_TEXT
+  text: "Walk"
+  font: "default"
+  id: "text4"
+  parent: "box4"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 131.0
+    y: 281.0
+  }
+  size {
+    x: 200.0
+    y: 50.0
+  }
+  color {
+    x: 0.2
+    y: 0.2
+    z: 0.2
+  }
+  type: TYPE_BOX
+  id: "box5"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  size {
+    x: 200.0
+    y: 50.0
+  }
+  type: TYPE_TEXT
+  text: "Eat"
+  font: "default"
+  id: "text5"
+  parent: "box5"
+  inherit_alpha: true
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT
