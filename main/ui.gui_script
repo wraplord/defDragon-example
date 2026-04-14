@@ -49,9 +49,8 @@ function on_input(self, action_id, action)
 			for i = 1, #self.nodes do
 				if gui.pick_node(self.nodes[i], action.x, action.y) then
 					gui.set_scale(self.nodes[i], vmath.vector3(1.2))
-					if module_instance.instances[1] then
-						dragonbones.fade_in_animation(module_instance.instances[1], 
-							self.animations[i], 0, 0, 0.1)
+					if self.instance then
+						dragonbones.fade_in_animation(self.instance, self.animations[i], 0, 0, 0.1)
 					end
 					break
 				end
@@ -69,7 +68,6 @@ function on_message(self, message_id, message)
 		update_world(self)
 		self.instance = module_instance.instances[message.instance_no]
 		if self.instance  then
-			dragonbones.move(self.instance, 10, 10)
 			pprint(dragonbones.get_anination_names(self.instance))
 		end
 	end

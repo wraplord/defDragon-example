@@ -15,7 +15,7 @@ input_method = HiddenInputField
 title = DefDragon Example
 custom_resources = /custom_res
 write_log_file = 1
-dependencies#0 = https://github.com/wraplord/extension-dragonbones/archive/refs/tags/0.1.zip
+dependencies#0 = https://github.com/wraplord/extension-dragonbones/archive/refs/tags/0.5.zip
 
 [physics]
 debug = 1
