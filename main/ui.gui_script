@@ -36,6 +36,7 @@ function init(self)
 	local tbl = {
 		skeleton_json = skeleton_json, 
 		tex_json = tex_json,
+		buffer_prefix = "rooster"
 	}
 
 	msg.post("/BatchDragonModel", hash("load"), tbl)
@@ -50,7 +51,8 @@ function on_input(self, action_id, action)
 				if gui.pick_node(self.nodes[i], action.x, action.y) then
 					gui.set_scale(self.nodes[i], vmath.vector3(1.2))
 					if self.instance then
-						dragonbones.fade_in_animation(self.instance, self.animations[i], 0, 0, 0.1)
+						local config = {layer = 0, play_times = 0, fade_in_time = 0.2, time_scale = 1.0 }
+						dragonbones.fade_in_animation(self.instance, self.animations[i], config)
 					end
 					break
 				end
@@ -66,7 +68,7 @@ end
 function on_message(self, message_id, message)
 	if message_id == hash("loaded") then
 		update_world(self)
-		self.instance = module_instance.instances[message.instance_no]
+		self.instance = module_instance.instances[message.instance_name]
 		if self.instance  then
 			pprint(dragonbones.get_anination_names(self.instance))
 		end

@@ -13,12 +13,8 @@ instances {
 }
 scale_along_z: 0
 embedded_instances {
-  id: "go"
-  data: "components {\n"
-  "  id: \"ui\"\n"
-  "  component: \"/main/ui.gui\"\n"
-  "}\n"
-  "embedded_components {\n"
+  id: "main"
+  data: "embedded_components {\n"
   "  id: \"camera\"\n"
   "  type: \"camera\"\n"
   "  data: \"aspect_ratio: 1.0\\n"
@@ -27,6 +23,14 @@ embedded_instances {
   "far_z: 1.0\\n"
   "orthographic_projection: 1\\n"
   "\"\n"
+  "}\n"
+  ""
+}
+embedded_instances {
+  id: "ui"
+  data: "components {\n"
+  "  id: \"ui\"\n"
+  "  component: \"/main/ui.gui\"\n"
   "}\n"
   ""
 }
